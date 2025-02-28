@@ -5,10 +5,13 @@ USER root
 RUN apk add --no-cache \
     python3 \
     py3-pip \
-    libheif
+    libheif \
+    py3-pillow \
+    py3-pillow-heif \
+    heic2png
 
 # Python-Pakete installieren
-RUN pip3 install pillow pillow-heif heic2png
+# RUN pip3 install pillow pillow-heif heic2png
 
 # Zurück zum node-Benutzer wechseln
 USER node
